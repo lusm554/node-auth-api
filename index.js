@@ -2,6 +2,13 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const app = require('express')();
 
+// Connect database
+if(process.env.NODE_ENV) {
+  require('./db/mongoose_config')
+} else {
+  require('./db/mongoose')
+}
+
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
