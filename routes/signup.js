@@ -13,7 +13,6 @@ Router.post('/signup', async (req, res) => {
   await user.save((err, doc) => {
     if(err) {
       res.status(500).send('Internal server error')
-      console.error(err)
       return
     }
     res.json(doc)
