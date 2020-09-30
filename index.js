@@ -13,6 +13,12 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+/** 
+ * TODO: 
+ * Make a simple registration 
+ * Implement authorization using JWT
+ */
+
 // Import routes
 const {Router: AuthRoutes} = require('./routes/auth')
 const {Router: Signup} = require('./routes/signup')
