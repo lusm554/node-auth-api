@@ -9,3 +9,7 @@ mongoose.connect(token, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch((err) => {
     console.error(err)
   })
+
+process.on('exit', () => {
+  mongoose.connection.close()
+})
