@@ -10,9 +10,12 @@
   "author": "loveyousomuch554@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "config": "^3.3.2",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.7",
+    "redis": "^3.0.2",
+    "uuid": "^8.3.0",
     "validator": "^13.1.17"
   },
   "devDependencies": {
