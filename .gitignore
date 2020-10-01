@@ -2,3 +2,6 @@ node_modules
 
 # Data base config
 /db/mongoose.js
+
+# Redis config 
+/config/
