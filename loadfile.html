@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Load file here...</title>
+</head>
+<body>
+  <input type="file" name="file" id="file"><br>
+  <input type="button" value="send" id="btn">
+  <script>
+    let formData = new FormData()
+    formData.append('file', file.files[0]);
+
+    btn.addEventListener('click', () => {
+      console.log(file.files[0])
+
+      fetch('http://localhost:8080/loadfile', {
+        method: 'POST',
+        body: formData
+      })
+      .then(console.log, console.log)
+    });
+  </script>
+</body>
+</html>

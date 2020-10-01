@@ -19,4 +19,22 @@ const { Router: Signup } = require('./routes/signup')
 app.use('/api/users', AuthRoutes)
 app.use('/api/users', Signup)
 
+
+/* ⬇️ not completed ⬇️ */ 
+const path = require('path')
+
+// To test file upload
+app.get('/loadfile', (req, res) => {
+  res.sendFile(path.resolve('loadfile.html'))
+})
+
+app.get('/getfile/:id', (req, res) => {
+  const { id } = req.params
+  res.json({id})
+})
+
+app.post('/loadfile', (req, res) => {
+  res.json(req.body)
+})
+
 app.listen(8080)
