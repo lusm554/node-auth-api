@@ -1,7 +1,7 @@
 class Session {
-  constructor() {
+  constructor(sessionId) {
     this.usedDate = {}
-    this.sessionId = null
+    this.sessionId = sessionId
   }
 
   set(obj) {
@@ -9,7 +9,7 @@ class Session {
   }
 
   save(client) {
-    if(this.sessionId) {
+    if (this.sessionId) {
       client.set(this.sessionId, JSON.stringify(this.userDate))
       client.expire(this.sessionId, 60 * 60 * 2)
     }

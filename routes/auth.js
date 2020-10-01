@@ -14,7 +14,7 @@ async function auth(req, res, next) {
   }
 
   User.findById(decoded.id, (err, doc) => {
-    if(err) {
+    if (err) {
       res.status(401).send('UNAUTHORIZED')
       return
     }
